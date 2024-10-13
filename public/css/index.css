@@ -96,3 +96,6 @@ header .ingresantes img {
   background: #b72107;
   border-radius: 5px;
 }
+.box-header .text-header a:hover {
+  letter-spacing: 1px;
+}
