@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'toxigenesis';
+}
+@font-face {
+    font-family: 'toxigenesis';
+    src: url(./public/fonts/toxigenesis\ bd.otf);
+}
+.navbar {
+    width: 100%;
+    padding: 1rem 5rem;
+    display: inline-flex;
+    /* background: #f4f4f4; */
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.navbar img {
+    width: 7rem;
+    transition: 0.5s;
+}
+.navbar img:hover {
+    filter: invert(15%) sepia(37%) saturate(6872%) hue-rotate(358deg) brightness(104%) contrast(97%);
+}
+.navbar ul {
+    display: grid;
+    align-items: center;
+}
+.navbar ul li {
+    list-style: none;
+}
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #272727;
+    transition: 0.5s;
+    padding: 0.5rem 0;
+    margin: 0 0.5rem;
+}
+.navbar ul li a:hover {
+    color: #002ab8;
+}
