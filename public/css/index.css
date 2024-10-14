@@ -8,6 +8,16 @@
   font-family: "Rabbid Highway";
   src: url(../fonts/RabbidHighwaySignII.otf);
 }
+@font-face {
+  font-family: "Gatha";
+  src: url(../fonts/ZTGatha-SemiBold.otf);
+}
+:root {
+  --red: #b72107;
+  --red2: #da2b08;
+  --black: #272727;
+  --white: #f4f4f4;
+}
 .navbar {
   width: 100%;
   padding: 1rem 5rem;
@@ -33,7 +43,7 @@
 .navbar ul li a {
   text-decoration: none;
   font-size: 1.2rem;
-  color: #272727;
+  color: var(--black);
   transition: 0.5s;
   padding: 0.5rem 0;
   margin: 0 0.5rem;
@@ -84,7 +94,7 @@ header .ingresantes img {
 }
 .box-header .text-header h1 {
   font-size: 3rem;
-  color: #272727;
+  color: var(--black);
   margin: 1rem 0 0;
 }
 .box-header .text-header a {
@@ -93,9 +103,83 @@ header .ingresantes img {
   font-size: 1.2rem;
   transition: 0.5s;
   padding: 0.8rem 1rem 0.5rem;
-  background: #b72107;
+  background: var(--red);
   border-radius: 5px;
 }
 .box-header .text-header a:hover {
   letter-spacing: 1px;
+  background: var(--red2);
+}
+#sobre-nosotros {
+  background-color: var(--white);
+  max-width: 100vw;
+  min-height: 100vh;
+  padding: 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#sobre-nosotros .container {
+  max-width: 40vw;
+}
+
+#sobre-nosotros .container h2 {
+  font-size: 2.5rem;
+  color: var(--black);
+  text-align: center;
+  margin: 1rem;
+}
+#sobre-nosotros .container p {
+  font-family: "Gatha";
+  font-size: 1rem;
+}
+#sobre-nosotros .container ul {
+  list-style-type: none;
+  padding: 1rem;
+}
+#sobre-nosotros .container ul li {
+  font-family: "Gatha";
+}
+#sobre-nosotros .container .redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#sobre-nosotros .container .redes a {
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: 0.5s;
+}
+
+#sobre-nosotros .container .redes a:hover {
+  letter-spacing: 1px;
+}
+
+#sobre-nosotros .container .redes a:nth-child(1) {
+  background: #25d366;
+  text-decoration: none;
+  padding: 0.8rem 1rem 0.5rem;
+  border-radius: 5px;
+  color: var(--white);
+  margin: 0 1rem;
+}
+
+#sobre-nosotros .container .redes a:nth-child(2) {
+  background: #0000ff;
+  text-decoration: none;
+  padding: 0.8rem 1rem 0.5rem;
+  border-radius: 5px;
+  color: var(--white);
+  margin: 0 1rem;
+}
+
+#sobre-nosotros .container .redes a:nth-child(3) {
+  background: #fe2858;
+  text-decoration: none;
+  padding: 0.8rem 1rem 0.5rem;
+  border-radius: 5px;
+  color: var(--white);
+  margin: 0 1rem;
 }
