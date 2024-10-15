@@ -217,7 +217,7 @@ header .ingresantes img {
     padding-top: 1rem;
     padding-left: 3rem;
     padding-right: 3rem;
-    height: 8.5rem;
+    height: 5rem;
   }
   .navbar ul li a {
     color: var(--white1);
@@ -226,13 +226,15 @@ header .ingresantes img {
     background: var(--white1);
     padding-left: 2rem;
     padding-right: 2rem;
-    height: 8.5rem;
+    height: 5rem;
   }
   .navbar.sticky img {
-    width: 7rem;
+    width: 3rem;
   }
   .navbar img {
-    width: 7rem;
+    display: block;
+    top: 15%;
+    width: 3rem;
   }
   .navbar .toggle {
     display: block;
@@ -270,10 +272,10 @@ header .ingresantes img {
 
   .navbar ul {
     position: absolute;
-    top: 8rem;
+    top: 5rem;
     left: 0;
     width: 100%;
-    height: calc(100vh - 8rem);
+    height: calc(100vh - 5rem);
     text-align: center;
     overflow: auto;
     background: var(--white1);
@@ -289,12 +291,13 @@ header .ingresantes img {
     visibility: visible;
     opacity: 1;
     flex-direction: column;
+    gap: 0.5rem;
     /* padding-top: 20px; */
   }
   .navbar.active ul li a {
     margin: 5px 0;
     color: var(--black);
-    font-size: 20px;
+    font-size: 1rem;
     display: inline-block;
   }
 
@@ -311,7 +314,11 @@ header .ingresantes img {
   }
   .box-header .text-header h1 {
     color: var(--white1);
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+  .box-header .text-header a {
+    font-size: 1rem;
   }
   .box-header .text-header span {
     color: var(--white2);
