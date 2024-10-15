@@ -21,13 +21,16 @@
 }
 .navbar {
   width: 100%;
+  top: 0;
+  left: 0;
   padding: 1rem 5rem;
   position: fixed;
-  display: inline-flex;
-  /* background: #f4f4f4; */
+  display: flex;
+  /* background: var(--red); */
   justify-content: space-between;
   flex-wrap: nowrap;
   transition: 0.5s;
+  z-index: 1000;
 }
 .navbar.sticky {
   background: var(--white1);
@@ -39,20 +42,29 @@
   filter: none;
   width: 5rem;
 }
+.navbar a {
+  z-index: 1000;
+  position: relative;
+}
 .navbar img {
+  position: relative;
   filter: invert(100%) sepia(95%) saturate(0%) hue-rotate(143deg)
     brightness(105%) contrast(108%);
   width: 7rem;
   transition: 0.5s;
 }
 .navbar ul {
+  position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .navbar ul li {
+  position: relative;
   list-style: none;
 }
 .navbar ul li a {
+  position: relative;
   text-decoration: none;
   font-size: 1.2rem;
   color: var(--black);
@@ -63,6 +75,10 @@
 .navbar ul li a:hover {
   color: #000;
 }
+.navbar .toggle {
+  display: none;
+}
+
 header {
   max-width: 100vw;
   min-height: 100vh;
@@ -198,21 +214,90 @@ header .ingresantes img {
 
 @media screen and (max-width: 768px) {
   .navbar {
-    padding: 1rem 2rem;
+    padding-top: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    height: 8.5rem;
   }
   .navbar ul li a {
     color: var(--white1);
   }
   .navbar.sticky {
     background: var(--white1);
-    padding: 0.5rem 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 8.5rem;
+  }
+  .navbar.sticky img {
+    width: 7rem;
   }
   .navbar img {
-    width: 5rem;
+    width: 7rem;
   }
-  .navbar.navbar.sticky img {
-    width: 4rem;
+  .navbar .toggle {
+    display: block;
+    margin: auto 0;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
   }
+  .navbar .toggle:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    width: 100%;
+    height: 2px;
+    background: var(--white1);
+    transition: 0.5s;
+    z-index: 1;
+    box-shadow: 0 10px 0 var(--white1);
+  }
+  .navbar.sticky .toggle:before {
+    background: #000;
+    box-shadow: 0 10px 0 #000;
+  }
+  .navbar .toggle::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    height: 2px;
+    background: var(--white1);
+    transition: 0.5s;
+    z-index: 1;
+  }
+
+  .navbar ul {
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 8rem);
+    text-align: center;
+    overflow: auto;
+    background: var(--white1);
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .navbar.sticky .toggle::after {
+    background: #000;
+  }
+  .navbar.active ul {
+    visibility: visible;
+    opacity: 1;
+    flex-direction: column;
+    /* padding-top: 20px; */
+  }
+  .navbar.active ul li a {
+    margin: 5px 0;
+    color: var(--black);
+    font-size: 20px;
+    display: inline-block;
+  }
+
   .ingresantes {
     display: none;
   }
