@@ -46,7 +46,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  padding: 1rem 5rem;
+  padding: 1rem 3rem;
   position: fixed;
   display: flex;
   /* background: var(--red); */
@@ -194,7 +194,7 @@ header .ingresantes img {
   font-family: "Gatha";
 }
 #spam .btn {
-  letter-spacing: 1px;
+  text-align: center;
   font-size: 1.2rem;
   font-family: "Coolvetica", sans-serif;
 }
