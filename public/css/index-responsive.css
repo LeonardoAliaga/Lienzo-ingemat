@@ -1,0 +1,146 @@
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding-top: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    height: 5rem;
+  }
+  .navbar ul li a {
+    color: var(--white1);
+  }
+  .navbar.sticky {
+    background: var(--white1);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 5rem;
+  }
+  .navbar.sticky img {
+    width: 3rem;
+  }
+  .navbar img {
+    display: block;
+    top: 15%;
+    width: 3rem;
+  }
+  .navbar .toggle {
+    display: block;
+    margin: auto 0;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  .navbar .toggle:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    width: 100%;
+    height: 2px;
+    background: var(--white1);
+    transition: 0.5s;
+    z-index: 1;
+    box-shadow: 0 10px 0 var(--white1);
+  }
+  .navbar.sticky .toggle:before {
+    background: #000;
+    box-shadow: 0 10px 0 #000;
+  }
+  .navbar .toggle::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    height: 2px;
+    background: var(--white1);
+    transition: 0.5s;
+    z-index: 1;
+  }
+
+  .navbar ul {
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 5rem);
+    text-align: center;
+    overflow: auto;
+    background: var(--white1);
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .navbar.sticky .toggle::after {
+    background: #000;
+  }
+  .navbar.active ul {
+    visibility: visible;
+    opacity: 1;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* padding-top: 20px; */
+  }
+  .navbar.active ul li a {
+    margin: 5px 0;
+    color: var(--black);
+    font-size: 1rem;
+    display: inline-block;
+  }
+
+  .ingresantes {
+    display: none;
+  }
+  .box-header {
+    background-image: url(../img/fondo.png);
+    width: 100vw;
+    height: 100vh;
+  }
+  .box-header img {
+    display: none;
+  }
+  .box-header .text-header h1 {
+    color: var(--white1);
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+  .box-header .text-header a {
+    font-size: 1rem;
+  }
+  .box-header .text-header span {
+    color: var(--white2);
+  }
+
+  #spam {
+    padding: 1rem;
+  }
+  #spam .estudiantes {
+    display: none;
+  }
+  #spam .text h3 {
+    font-size: 1rem;
+  }
+  #spam .text span {
+    font-size: 0.5rem;
+  }
+  #spam .btn {
+    letter-spacing: 1px;
+    font-size: 0.8rem;
+  }
+
+  #sobre-nosotros {
+    padding: 2rem;
+    flex-direction: column;
+  }
+  #sobre-nosotros .container {
+    max-width: 100vw;
+  }
+  #sobre-nosotros .container h2 {
+    font-size: 2rem;
+  }
+  #sobre-nosotros .container p {
+    font-size: 1rem;
+  }
+  #sobre-nosotros .mapa {
+    display: none;
+  }
+}
