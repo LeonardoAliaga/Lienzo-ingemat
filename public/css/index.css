@@ -277,3 +277,79 @@ header .ingresantes img {
   color: var(--white1);
   margin: 0 1rem;
 }
+
+/* Estilos para el footer */
+.footer {
+  background-color: var(--black);
+  color: var(--white1);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 20px;
+  min-width: 250px;
+}
+
+.footer-section h2 {
+  font-family: "Gatha", sans-serif;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section li {
+  font-family: "Gatha", sans-serif;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  font-family: "Gatha", sans-serif;
+  color: var(--white1);
+  text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-section .social ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-section .social ul li {
+  display: inline;
+}
+
+.footer-section .social ul li a {
+  font-size: 1.5em;
+}
+
+.footer-bottom {
+  background-color: var(--black);
+  color: var(--white2);
+  padding: 10px 0;
+  font-size: 0.9em;
+}
